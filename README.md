@@ -1,2 +1,2 @@
 # Ottergram
-Website that shows pictures of otters 
+Website that shows pictures of Otters 
