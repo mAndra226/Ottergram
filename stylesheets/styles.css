@@ -128,13 +128,13 @@ a {
 
 /*sending the arrow to the sides of screen*/
 .next {
-    right: 0;
     border-radius: 5px 0 0 5px;
+    right: 0;
 }
 
 .prev {
-    left: 0;
     border-radius: 0 5px 5px 0;
+    left: 0;
 }
 
 .detail-image-frame {
