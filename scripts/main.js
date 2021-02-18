@@ -81,25 +81,6 @@ function addThumbClickHandler(thumb) {
     });
 }
 
-//function that listens for a click on the prev/next arrows 
-function addArrowClickHandler() {
-    'use strict';
-
-    var i;
-    var current = document.querySelector(DETAIL_IMAGE_SELECTOR);
-    var slide = getThumbnailsArray(); //initializing array
-
-    for (i = 0; i < slide.length; i += 1) {
-        //comparing that the current image and the array are the same
-        if (current.getAttribute('src') === imageFromThumb(slide[i])) {
-            setDetailsFromThumb(slide[i + 1]); //makes sure that the next image is read
-            showDetails();
-
-            break;
-        }
-    }
-}
-
 //function that logs the keys you press to he console
 function addKeyPressHandler() {
     'use strict';
@@ -120,21 +101,6 @@ function initializeEvents() {
 
     var thumbnails = getThumbnailsArray();
     thumbnails.forEach(addThumbClickHandler);
-
-    var prevButton = document.querySelector(DETAIL_IMAGE_BUTTON_PREV);
-    var nextButton = document.querySelector(DETAIL_IMAGE_BUTTON_NEXT);
-
-    //prev button
-    prevButton.addEventListener('click', function (event) {
-        event.preventDefault();
-        addArrowClickHandler();
-    });
-
-    //next button
-    nextButton.addEventListener('click', function (event) {
-        event.preventDefault();
-        addArrowClickHandler();
-    });
 
     addKeyPressHandler();
 }
